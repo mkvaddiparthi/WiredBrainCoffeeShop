@@ -1,5 +1,6 @@
 ﻿using CoffeeShopBusinessObjects;
 using System;
+using System.Linq;
 
 namespace WiredBrainCoffee.ShopInfoTool
 {
@@ -17,28 +18,37 @@ namespace WiredBrainCoffee.ShopInfoTool
             {
                 var line = Console.ReadLine();
 
+                if (string.Equals(line, "quit", StringComparison.OrdinalIgnoreCase))
+                {
+                    break;
+                }
+
                 if (string.Equals(line, "help", StringComparison.OrdinalIgnoreCase))
                 {
                     Console.WriteLine("> available coffee shop commands");
                     foreach (var coffeshop in coffeeShopProvider.LoadCoffeeShops())
                     {
                         Console.WriteLine($"> " + coffeshop.Location);
+                    }
+                }
+                else
+                {
+                    var coffeeShop = coffeeShopProvider.LoadCoffeeShops().ToList().Where(w => w.Location.Equals(line, StringComparison.OrdinalIgnoreCase)).FirstOrDefault();
 
-                        switch (coffeshop.Location.ToLower())
-                        {
-                            case "london":
-                                Console.WriteLine("The paper cups in London coffee shop are : " + coffeshop.StockInShop.ToString());
-                                break;
-                            case "manchester":
-                                Console.WriteLine("Manchester coffee shop having " + coffeshop.StockInShop.ToString() + " number of paper coffee cups.");
-                                break;
-                            case "stockport":
-                                Console.WriteLine("Stockport coffee shop cups : " + coffeshop.StockInShop.ToString());
-                                break;
-                            case "others":
-                                Console.WriteLine("invalid city code");
-                                break;
-                        }                      
+                    switch (coffeeShop.Location.ToLower())
+                    {
+                        case "london":
+                            Console.WriteLine("The paper cups in London coffee shop are : " + coffeeShop.StockInShop.ToString());
+                            break;
+                        case "manchester":
+                            Console.WriteLine("Manchester coffee shop having " + coffeeShop.StockInShop.ToString() + " number of paper coffee cups.");
+                            break;
+                        case "stockport":
+                            Console.WriteLine("Stockport coffee shop cups : " + coffeeShop.StockInShop.ToString());
+                            break;
+                        case "others":
+                            Console.WriteLine("invalid city code");
+                            break;
                     }
                 }
             }
