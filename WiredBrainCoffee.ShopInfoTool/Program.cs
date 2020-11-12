@@ -34,6 +34,11 @@ namespace WiredBrainCoffee.ShopInfoTool
                         {
                             Console.WriteLine("Manchester coffee shop having " + coffeshop.StockInShop.ToString() + " number of paper coffee cups.");
                         }
+                         else
+                        if (string.Equals(coffeshop.Location, "stockport", StringComparison.OrdinalIgnoreCase))
+                        {
+                            Console.WriteLine("Stockport coffee shop paper cups " + coffeshop.StockInShop.ToString());
+                        }
                     }
                 }
             }
