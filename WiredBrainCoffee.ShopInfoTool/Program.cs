@@ -9,7 +9,7 @@ namespace WiredBrainCoffee.ShopInfoTool
         {
             Console.WriteLine("Welcome to Wire Brained Coffee Shop - For Asia region!");
 
-            Console.WriteLine("Type 'help' to list all available commands ! Press quit to exit from the menu.");
+            Console.WriteLine("Type 'help' to list all available commands ! Press 'quit' to exit from the menu.");
 
             var coffeeShopProvider = new CoffeeBusiness();
 
