@@ -23,9 +23,15 @@ namespace WiredBrainCoffee.ShopInfoTool
                     foreach (var coffeshop in coffeeShopProvider.LoadCoffeeShops())
                     {
                         Console.WriteLine($"> " + coffeshop.Location);
+
+
+                        if (string.Equals(coffeshop.Location, "london", StringComparison.OrdinalIgnoreCase))
+                        {
+                            Console.WriteLine("The paper cups in London coffee shop are : " + coffeshop.StockInShop.ToString());
+                        }
                     }
                 }
             }
-        }        
+        }
     }
 }
