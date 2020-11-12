@@ -6,7 +6,7 @@ namespace WiredBrainCoffee.ShopInfoTool
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Wire Brained Coffee Shop - For all countries.!");
+            Console.WriteLine("Welcome to Wire Brained Coffee Shop!");
         }
     }
 }
