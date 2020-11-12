@@ -35,6 +35,9 @@ namespace WiredBrainCoffee.ShopInfoTool
                             case "stockport":
                                 Console.WriteLine("Stockport coffee shop cups : " + coffeshop.StockInShop.ToString());
                                 break;
+                            case "others":
+                                Console.WriteLine("invalid city code");
+                                break;
                         }                      
                     }
                 }
