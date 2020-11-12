@@ -24,16 +24,18 @@ namespace WiredBrainCoffee.ShopInfoTool
                     {
                         Console.WriteLine($"> " + coffeshop.Location);
 
-
-                        if (string.Equals(coffeshop.Location, "london", StringComparison.OrdinalIgnoreCase))
+                        switch (coffeshop.Location.ToLower())
                         {
-                            Console.WriteLine("The paper cups in London coffee shop are : " + coffeshop.StockInShop.ToString());
-                        }
-                        else
-                        if (string.Equals(coffeshop.Location, "manchester", StringComparison.OrdinalIgnoreCase))
-                        {
-                            Console.WriteLine("Manchester coffee shop having " + coffeshop.StockInShop.ToString() + " number of paper coffee cups.");
-                        }
+                            case "london":
+                                Console.WriteLine("The paper cups in London coffee shop are : " + coffeshop.StockInShop.ToString());
+                                break;
+                            case "manchester":
+                                Console.WriteLine("Manchester coffee shop having " + coffeshop.StockInShop.ToString() + " number of paper coffee cups.");
+                                break;
+                            case "stockport":
+                                Console.WriteLine("Stockport coffee shop cups : " + coffeshop.StockInShop.ToString());
+                                break;
+                        }                      
                     }
                 }
             }
