@@ -18,12 +18,12 @@ namespace WiredBrainCoffee.ShopInfoTool
             {
                 var line = Console.ReadLine();
 
-                if (string.Equals(line, "quit", StringComparison.OrdinalIgnoreCase))
+                if (string.Equals(line, "Quit", StringComparison.OrdinalIgnoreCase))
                 {
                     break;
                 }
 
-                if (string.Equals(line, "help", StringComparison.OrdinalIgnoreCase))
+                if (string.Equals(line, "Help", StringComparison.OrdinalIgnoreCase))
                 {
                     Console.WriteLine("> available coffee shop commands");
                     foreach (var coffeshop in coffeeShopProvider.LoadCoffeeShops())
