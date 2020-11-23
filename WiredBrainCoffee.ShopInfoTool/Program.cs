@@ -18,7 +18,7 @@ namespace WiredBrainCoffee.ShopInfoTool
             {
                 var line = Console.ReadLine();
 
-                if (string.Equals(line, "quit spacess added", StringComparison.OrdinalIgnoreCase))
+                if (string.Equals(line, "quit", StringComparison.OrdinalIgnoreCase))
                 {
                     break;
                 }
