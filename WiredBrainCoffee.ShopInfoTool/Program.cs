@@ -23,7 +23,7 @@ namespace WiredBrainCoffee.ShopInfoTool
                     break;
                 }
 
-                if (string.Equals(line, "help", StringComparison.OrdinalIgnoreCase))
+                if (string.Equals(line, "help spacess added", StringComparison.OrdinalIgnoreCase))
                 {
                     Console.WriteLine("> available coffee shop commands");
                     foreach (var coffeshop in coffeeShopProvider.LoadCoffeeShops())
