@@ -20,16 +20,11 @@ namespace WiredBrainCoffee.ShopInfoTool
 
                 if (string.Equals(line, "Quit", StringComparison.OrdinalIgnoreCase))
                 {
-
-
-                    break;
+                  break;
                 }
 
                 if (string.Equals(line, "Help", StringComparison.OrdinalIgnoreCase))
-                {
-
-
-                    Console.WriteLine("> available coffee shop commands");
+                {                    Console.WriteLine("> available coffee shop commands");
                     foreach (var coffeshop in coffeeShopProvider.LoadCoffeeShops())
                     {
                         Console.WriteLine($"> " + coffeshop.Location);
