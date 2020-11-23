@@ -18,7 +18,7 @@ namespace WiredBrainCoffee.ShopInfoTool
             {
                 var line = Console.ReadLine();
 
-                if (string.Equals(line, "quit", StringComparison.OrdinalIgnoreCase))
+                if (string.Equals(line, "quit - Feature 2", StringComparison.OrdinalIgnoreCase))
                 {
                     break;
                 }
